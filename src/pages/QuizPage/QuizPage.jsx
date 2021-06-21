@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { CgSpinnerTwo } from 'react-icons/all'
-import { Helmet } from 'react-helmet'
 
 import Question from '../../components/Question/Question'
 import StartQuiz from '../../components/StartQuiz/StartQuiz'
