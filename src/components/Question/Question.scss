@@ -1,0 +1,116 @@
+$bg-secondry: #1F1F1F;
+$text-primary: #E4E4E4;
+$text-secondry: #808080;
+
+$secondry: #BB86FC;
+
+.quiz-container{
+    background-color: $bg-secondry;
+    padding: 10px 25px;
+    box-shadow: 0px 0px 15px rgba($color: #333, $alpha: 0.2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    animation: fade 0.5s linear;
+
+    @keyframes fade {
+        from{
+            opacity: 0;
+        }
+    }
+
+    .question{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 5px;
+        margin-bottom: 20px;
+
+        .question__number{
+            color: $text-secondry;
+            font-size: 17px;
+            margin-bottom: 15px;
+        }
+        .question__text{
+            color: $text-primary;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    }
+
+    .answers{
+        width: 100%;
+        padding: 5px 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 20px;
+        
+        .answer{
+            width: 40%;
+            text-align: center;
+            padding: 10px 15px;
+            border: 1px solid $secondry;
+            border-radius: 5px;
+            user-select: none;
+            cursor: pointer;
+            margin: 5px 10px;
+            transition: 0.3s;
+            transition-property: background-color, color;
+
+            .answer__text{
+                color: $text-primary;
+            }
+
+            &:hover,
+            &.active{
+                background-color: $secondry;
+                .answer__text{
+                    color: $bg-secondry;
+                }
+            }
+
+            &.disabled{
+                pointer-events: none;
+            }
+        }
+
+        @media (max-width: 750px) {
+            .answer{
+                width: 100%;
+            }
+        }
+    }
+
+    .next__question{
+        width: 100%;
+        
+        .next-btn{
+            background-color: $secondry;
+            width: fit-content;
+            color: $bg-secondry;
+            padding: 10px 25px;
+            border-radius: 5px;
+            margin-left: auto;
+            cursor: pointer;
+            user-select: none;
+
+            &.finished{
+                cursor: not-allowed;
+                background-color: #796492;
+                color: $text-primary;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .next-btn{
+                width: auto;
+                text-align: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,58 @@
+.quiz-page {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    padding: 0px 200px;
+    animation: fade 0.5s linear;
+
+    @keyframes fade {
+        from{
+            opacity: 0;
+        }
+    }
+
+    @media (max-width: 1150px) {
+      padding: 0px 120px;
+    }
+    @media (max-width: 900px) {
+      padding: 0px 70px;
+    }
+    @media (max-width: 550px) {
+      padding: 0px 20px;
+    }
+    @media (max-width: 350px) {
+      padding: 0px 10px;
+    }
+
+    
+
+  }
+
+  .spinner {
+    span {
+      font-size: 50px;
+      color: #e4e4e4;
+      
+      svg{
+        animation: spinner 1s infinite;
+
+      @keyframes spinner {
+        0%{
+          transform: rotate(0deg);
+        }
+        100%{
+          transform: rotate(360deg);
+        }
+      }
+      }
+    }
+  }
+  
+}

@@ -1,0 +1,114 @@
+.login-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+
+    .form__title{
+        width: 100%;
+        padding: 10px ;
+        text-align: center;
+        font-family: 'Tajawal';
+        font-size: 30px;
+        font-weight: 700;
+        color: #E4E4E4;
+    }
+
+    .form__row{
+        width: 100%;
+        padding: 10px 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .box{
+            width: 100%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            input{
+                width: 100%;
+                font-family: 'Tajawal';
+                font-size: 22px;
+                outline: none;
+                border: none;
+                background: none;
+                border: 2px solid rgba($color: #E4E4E4, $alpha: 0.7);
+                padding: 5px 10px;
+                color: #E4E4E4;
+                border-radius: 5px;
+            }
+
+            label{
+                position: absolute;
+                font-size: 22px;
+                left: 0px;
+                top: 0%;
+                color: #E4E4E4;
+                padding: 5px 10px;
+                cursor: text;
+                user-select: none;
+                transition: 0.3s;
+            }
+
+            &.active{
+                label{
+                    font-size: 15px;
+                    top: -15px;
+                    left: 15px;
+                    padding: 0 0.5rem;
+                    background: #121212;
+                }
+                input{
+                    border-color: rgba($color: #BB86FC, $alpha: 0.7);
+                }
+            }
+
+            .show-pass{
+                position: absolute;
+                color: #E4E4E4;
+                font-size: 20px;
+                cursor: pointer;
+                right: 10px;
+            }
+        }
+    }
+
+    .form__btn{
+        width: 100%;
+        padding: 10px 5px;
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .btn{
+            text-align: center;
+            width: 100%;
+            font-family: 'Tajawal';
+            font-size: 22px;
+            background: none;
+            border: 2px solid #E4E4E4;
+            padding: 5px 10px;
+            background-color: #E4E4E4;
+            font-weight: 550;
+            border-radius: 5px;
+            cursor: pointer;
+            user-select: none;
+            transition: 0.2s;
+            transition-property: transform;
+
+            &:active{
+                transform: scale(.99);
+            }
+        }
+    }
+
+    @media (max-width: 380px) {
+        width: 300px;
+    }
+}
+
+
